@@ -120,8 +120,8 @@ model LC_TwoTank_HybridSplit
   parameter Real f_tol = 0.05;
   
   //Total pumping losses
-  SI.Power W_loss_pump = Tank_A.W_loss_pump + Tank_B.W_loss_pump;
-  SI.HeatFlowRate Q_loss_total = Tank_A.Q_loss_total + Tank_B.Q_loss_total "thermal loss rate (J/s)";
+  SI.Power W_dot_loss_pump = Tank_A.W_dot_loss_pump + Tank_B.W_dot_loss_pump;
+  SI.HeatFlowRate Q_dot_loss_total = Tank_A.Q_dot_loss_total + Tank_B.Q_dot_loss_total "thermal loss rate (J/s)";
   parameter Real eff_pump = 1.0 "Pumping efficiency, fed into physical model";
   
   parameter SI.Temperature T_bot_high = T_recv_set - 1.0 "Temperature of T_05 at which it switches to the next tank during charging";
